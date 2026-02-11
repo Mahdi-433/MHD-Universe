@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-family: sans-serif;
+  background: radial-gradient(circle, #0b0c1e, #05060a);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  padding: 0 50px;
+}
+
+.node-card {
+  width: 320px;
+  margin: 0 80px;
+  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.5s, box-shadow 0.5s, background 0.5s, opacity 0.8s;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.node-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.node-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 30px 60px rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+}
