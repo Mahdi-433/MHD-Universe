@@ -25,7 +25,7 @@ const nodes = [
   { x: width/2 + 1800, y: height*0.4, r: 12 },
 ];
 
-// Particles پیشرفته
+// Particles
 const particles = [];
 for(let i=0;i<300;i++){
   particles.push({
